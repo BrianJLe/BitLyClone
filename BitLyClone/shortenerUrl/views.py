@@ -11,7 +11,7 @@ def index(request):
     return render_to_response('shortenerUrl/index.html', c)
  
 def redirectOriginal(request, short_id):
-    url = get_object_or_404(Urls, pk=short_id) # get object, if not found return 404 error
+    url = get_object_or_404(Urls, pk=short_id)
     url.count += 1
     url.save()
     return HttpResponseRedirect(url.httpurl)

@@ -1,6 +1,5 @@
 from django.db import models
- 
-# Create your models here.
+
 class Urls(models.Model):
 	# Storage for shorten urls
     short_id = models.SlugField(max_length=6,primary_key=True)
