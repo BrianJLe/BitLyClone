@@ -1,0 +1,17 @@
+{% extends "shortenerUrl/base.html" %}
+
+{% block content %}
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="col-sm-9">
+			<input type="text" name="url" id="url" class="form-control input-sm" placeholder="Please enter full URL path including http" />
+		</div>
+		<div class="col-sm-3">
+			{% csrf_token %}
+			<button id="submitButton" class="btn btn-primary">Submit</button></p> 
+		</div>
+	</div>
+	<div class="panel-footer"><span id="url-result"></span></div>
+</div>
+{% endblock %}
